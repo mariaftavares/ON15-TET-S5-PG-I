@@ -1,23 +1,23 @@
 class dnaTransformacao {
-       paraRna(dna){
-        this.dna = dna.split("");
-        this.rna = [];
-    for (let sequencia of this.dna){
-        if (sequencia.toLowerCase() == "g"){
-            this.rna.push("C")
+    paraRna(dna){
+     this.dna = dna.split("");
+     this.rna = [];
+        for (let sequencia of this.dna){
+                if (sequencia.toLowerCase() == "g"){
+                    this.rna.push("C")
+                }
+                else if (sequencia.toLowerCase() == "c"){
+                        this.rna.push("G")
+                }
+                else if (sequencia.toLowerCase() == "t"){
+                    this.rna.push("A")
+                }
+                else if (sequencia.toLowerCase() == "a"){
+                    this.rna.push("U")
+                }
+            
         }
-       else if (sequencia.toLowerCase() == "c"){
-            this.rna.push("G")
-        }
-        else if (sequencia.toLowerCase() == "t"){
-            this.rna.push("A")
-        }
-        else if (sequencia.toLowerCase() == "a"){
-            this.rna.push("U")
-        }
-          
-        }
-        return this.rna.join("");
+            return this.rna.join("");
     }
 }
 
